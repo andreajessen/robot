@@ -20,7 +20,7 @@ class BBCON:
         self.behavior_values = {'motor_duration': 0.5, 'min_distance': 5.0,
                                 'goPri': 1,'backwards': [-1, -1], "forwards": [1, 1], 'whitePri': 2,
                                 'white_scale': 0.9, 'turn': [1, 0], 'cameraPri': 5, 'stop': [0, 0],
-                                "red_scale": 0.95}
+                                "red_scale": 0.95, 'collitionPri': 4}
 
     def add_behavior(self, behavior):
         """legg til ny behavior"""
