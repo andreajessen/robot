@@ -2,7 +2,7 @@ import os
 from PIL import Image
 
 
-class Camera():
+class Camera:
 
     def __init__(self, img_width=128, img_height=96, img_rot=0):
         self.value = None
@@ -10,7 +10,8 @@ class Camera():
         self.img_height = img_height
         self.img_rot = img_rot
 
-    def get_value(self):  return self.value
+    def get_value(self):
+        return self.value
 
     def update(self):
         self.sensor_get_value()
