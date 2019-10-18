@@ -25,7 +25,6 @@ class ReflectanceSensors:
         print(self.max_val)
         print(self.min_val)
 
-
     def setup(self):
         # Initialize class variables
         self.max_val = [-1, -1, -1, -1, -1, -1]
@@ -43,7 +42,6 @@ class ReflectanceSensors:
 
         # Set the mode to GPIO.BOARD
         GPIO.setmode(GPIO.BOARD)
-
 
     def calibrate(self):
         print("calibrating...")
