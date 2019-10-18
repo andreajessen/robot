@@ -49,7 +49,7 @@ class BBCON:
 
         for behavior in self.behaviors:
             behavior.update()
-            if behavior.activate_flag:
+            if behavior.active_flag:
                 self.activate_behavior(behavior)
             else:
                 self.deactivate_behavior(behavior)
