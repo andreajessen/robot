@@ -43,7 +43,7 @@ class Go(Behavior):
 
     def __init__(self, bbcon):
         super().__init__(bbcon)
-        self.priority = bbcon.behavior_values["goPri"] #dic fra bbcon
+        self.priority = bbcon.behavior_values["goPri"]  # dic fra bbcon
 
     def consider_activation(self):
         """test whether it should deactivate"""
@@ -63,7 +63,7 @@ class AvoidCollision(Behavior):
 
     def __init__(self, bbcon, ultra_sonic):
         super().__init__(bbcon)
-        self.priority = bbcon.behavior_values["collitionPri"] #dic fra bbcon
+        self.priority = bbcon.behavior_values["collitionPri"]  # dic fra bbcon
         self.sensob = [ultra_sonic]
 
     def consider_activation(self):
