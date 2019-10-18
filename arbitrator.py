@@ -1,5 +1,4 @@
 import random
-
 class Arbitrator:
     """This class decides which behavior that wins"""
 
@@ -19,9 +18,7 @@ class Arbitrator:
 
         for array in weight_range_array:
             if number >= array[0] and number <= array[1]:
-                print(
-                    "The number is in behavior",
-                    weight_range_array.index(array))
+                print("The number is in behavior", weight_range_array.index(array))
                 winner = behaviors[weight_range_array.index(array)]
 
         return winner.motor_recommendations, winner.halt_request
