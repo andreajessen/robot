@@ -3,6 +3,7 @@ from arbitrator import Arbitrator
 from behavior import Go, AvoidCollision, AvoidWhiteline, Stop
 from camera_sensob import CameraSensob
 from irproximity_sensob import IRProximitySensob
+from reflectance_sensob import ReflectanceSensob
 from ultrasonic import Ultrasonic
 from zumo_button import ZumoButton
 
@@ -61,7 +62,7 @@ class BBCON:
 
     def main(self):
         ultra_sonic = Ultrasonic()
-        ir_sensor = IRProximitySensob()
+        ir_sensor = ReflectanceSensob()
         camera = CameraSensob()
         go = Go(self)
         collide = AvoidCollision(self, ultra_sonic)
