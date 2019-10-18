@@ -1,0 +1,2 @@
+"""Motbo klassen"""
+
