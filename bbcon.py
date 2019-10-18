@@ -56,9 +56,9 @@ class BBCON:
             else:
                 self.deactivate_behavior(behavior)
         recommentations, stop = self.arbitrator.choose_action(self.active_behaviors)
-        print(recommentations)
+        print("Recomedaions from arbitrator", recommentations)
         for i in range(len(self.motobs)):
-            print(recommentations[i])
+            print("Recomedations i", recommentations[i])
             self.motobs[i].update(recommentations[i])
 
         for sensob in self.sensobs:
