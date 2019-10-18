@@ -1,5 +1,5 @@
 import random
-class Arbitraitor:
+class Arbitrator:
     """This class decides which behavior that wins"""
 
     def choose_action(self, behaviors):
