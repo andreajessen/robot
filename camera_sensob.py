@@ -28,6 +28,6 @@ class CameraSensob(Sensob):
 
     def update(self):
         """Overwrite the update-method in the superclass Sensob"""
-        self.value = self.rgb(self.senors[0].update())
+        self.value = self.rgb(self.sensors[0].update())
         print("Camera", self.value)
         return self.value
