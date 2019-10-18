@@ -1,6 +1,6 @@
 """Higest-level class - require one instance"""
 from arbitrator import Arbitrator
-from behavior import Go, AvoidCollision, AvoidWhiteline, Stop
+from behavior import *
 from camera_sensob import CameraSensob
 from irproximity_sensob import IRProximitySensob
 from reflectance_sensob import ReflectanceSensob
@@ -18,9 +18,9 @@ class BBCON:
         self.motobs = []
         self.arbitrator = Arbitrator()
         self.behavior_values = {'motor_duration': 0.5, 'min_distance': 5.0,
-                                'goPri': 1,'backwards': [-1, -1], "forwards": [1, 1], 'whitePri': 2,
+                                'goPri': 1,'backwards': [-1, -1], "forward": [1, 1], 'whitePri': 2,
                                 'white_scale': 0.9, 'turn': [1, 0], 'cameraPri': 5, 'stop': [0, 0],
-                                "red_scale": 0.95}
+                                "red_scale": 0.95, 'collitionPri': 4}
 
     def add_behavior(self, behavior):
         """legg til ny behavior"""
@@ -49,7 +49,7 @@ class BBCON:
 
         for behavior in self.behaviors:
             behavior.update()
-            if behavior.activate_flag:
+            if behavior.active_flag:
                 self.activate_behavior(behavior)
             else:
                 self.deactivate_behavior(behavior)

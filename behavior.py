@@ -1,5 +1,3 @@
-from bbcon import BBCON
-
 
 class Behavior:
 
