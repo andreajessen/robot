@@ -1,6 +1,6 @@
 """Higest-level class - require one instance"""
 from arbitrator import Arbitrator
-from behavior import Go, AvoidCollision, AvoidWhiteline, Stop
+from behavior import *
 from camera_sensob import CameraSensob
 from irproximity_sensob import IRProximitySensob
 from reflectance_sensob import ReflectanceSensob
