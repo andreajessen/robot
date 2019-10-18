@@ -1,5 +1,10 @@
 """Higest-level class - require one instance"""
 from arbitrator import Arbitrator
+from behavior import Go, AvoidCollision, AvoidWhiteline, Stop
+from camera_sensob import CameraSensob
+from irproximity_sensob import IRProximitySensob
+from ultrasonic import Ultrasonic
+
 
 class BBCON:
     """class BBCON"""
@@ -52,3 +57,30 @@ class BBCON:
 
         for sensob in self.sensobs:
             sensob.reset()
+
+    def main(self):
+        ultra_sonic = Ultrasonic()
+        ir_sensor = IRProximitySensob()
+        camera = CameraSensob()
+        go = Go(self)
+        collide = AvoidCollision(self, ultra_sonic)
+        white = AvoidWhiteline(self, ir_sensor)
+        stop = Stop(self, camera)
+        self.sensobs.append(ultra_sonic)
+        self.sensobs.append(ir_sensor)
+        self.sensobs.append(camera)
+        self.behaviors.append(go)
+        self.behaviors.append(collide)
+        self.behaviors.append(white)
+        self.behaviors.append(stop)
+        while True:
+            self.run_one_timestep()
+            print("RUN")
+
+
+if __name__ == "__main__":
+    bbcon = BBCON()
+    bbcon.main()
+
+
+
