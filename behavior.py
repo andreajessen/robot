@@ -49,8 +49,7 @@ class Go(Behavior):
 
     def consider_deactivation(self):
         """test whether it should deactivate"""
-        if self.halt:
-            self.active_flag = False
+        self.active_flag = True
 
     def sense_and_act(self):
         self.motor_recommendations = [self.bbcon.behavior_values["forward"]]

@@ -3,6 +3,8 @@ from arbitrator import Arbitrator
 from behavior import *
 from camera_sensob import CameraSensob
 from irproximity_sensob import IRProximitySensob
+from motob import Motob
+from motors import Motors
 from reflectance_sensob import ReflectanceSensob
 from ultrasonic import Ultrasonic
 from zumo_button import ZumoButton
@@ -54,13 +56,21 @@ class BBCON:
             else:
                 self.deactivate_behavior(behavior)
         recommentations, stop = self.arbitrator.choose_action(self.active_behaviors)
+        print(recommentations)
         for i in range(len(self.motobs)):
+            print(recommentations[i])
             self.motobs[i].update(recommentations[i])
 
         for sensob in self.sensobs:
             sensob.reset()
 
+    def add_motob(self):
+        motor = Motors()
+        motob = Motob(motor, self)
+        self.motobs.append(motob)
+
     def main(self):
+        self.add_motob()
         ultra_sonic = Ultrasonic()
         ir_sensor = ReflectanceSensob()
         camera = CameraSensob()
