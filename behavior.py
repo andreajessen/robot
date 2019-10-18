@@ -39,6 +39,8 @@ class Behavior:
         self.weight = self.priority * self.match_degree
 
 
+
+
 class Go(Behavior):
 
     def __init__(self, bbcon):
