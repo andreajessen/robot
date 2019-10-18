@@ -2,6 +2,7 @@
 from sensob import Sensob
 from ultrasonic import Ultrasonic
 
+
 class UltrasonicSensob(Sensob):
     """Calculate the distance to the nearest obstacle by looking at the time differences"""
 
@@ -9,7 +10,6 @@ class UltrasonicSensob(Sensob):
         """Initialize"""
         super().__init__()
         self.sensors = [Ultrasonic()]
-
 
     def update(self):
         """Overwrite the update-method in the superclass Sensob"""
