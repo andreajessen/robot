@@ -4,6 +4,7 @@ from behavior import Go, AvoidCollision, AvoidWhiteline, Stop
 from camera_sensob import CameraSensob
 from irproximity_sensob import IRProximitySensob
 from ultrasonic import Ultrasonic
+from zumo_button import ZumoButton
 
 
 class BBCON:
@@ -73,6 +74,8 @@ class BBCON:
         self.behaviors.append(collide)
         self.behaviors.append(white)
         self.behaviors.append(stop)
+        zumo = ZumoButton()
+        zumo.wait_for_press()
         while True:
             self.run_one_timestep()
             print("RUN")
@@ -81,6 +84,7 @@ class BBCON:
 if __name__ == "__main__":
     bbcon = BBCON()
     bbcon.main()
+
 
 
 
