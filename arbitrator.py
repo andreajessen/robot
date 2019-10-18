@@ -9,7 +9,7 @@ class Arbitrator:
         maximum_weight = 0.0
         for behavior in behaviors:
             old_max = maximum_weight
-            maximum_weight += behavior.weigth
+            maximum_weight += behavior.weight
 
             array_range = [old_max, maximum_weight]
             weight_range_array.append(array_range)
