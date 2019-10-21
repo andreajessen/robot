@@ -72,6 +72,7 @@ class BBCON:
         self.motobs.append(motob)
 
     def main(self):
+        print("main!!!!!")
         self.add_motob()
         ultra_sonic = Ultrasonic()
         ir_sensor = ReflectanceSensob()
