@@ -102,7 +102,7 @@ class AvoidWhiteline(Behavior):
         self.match_degree = 0
         self.motor_recommendations = None
         for number in sensor_array:
-            if number >= white_scale:
+            if number <= white_scale:
                 self.motor_recommendations = [self.bbcon.behavior_values["turn"]]
                 self.match_degree = 1
                 break
