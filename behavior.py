@@ -133,9 +133,11 @@ class Stop(Behavior):
         if self.stopped and image[0] >= red_scale:
             self.motor_recommendations = [self.bbcon.behavior_values["forward"]]
             self.stopped = False
+            self.match_degree = 1
         elif image[0] >= red_scale:
             self.motor_recommendations = [self.bbcon.behavior_values["stop"]]
             self.stopped = True
+            self.match_degree = 1
 
 
 
