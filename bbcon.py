@@ -22,8 +22,8 @@ class BBCON:
         self.arbitrator = Arbitrator()
         self.behavior_values = {'motor_duration': 0.4, 'min_distance': 7.0,
                                 'goPri': 1,'backwards': [-0.25, -0.25], "forward": [0.25, 0.25], 'whitePri': 2,
-                                'white_scale': 0.3, 'turn': [1, 0], 'cameraPri': 5, 'stop': [0, 0],
-                                "red_scale": 0.7, 'collitionPri': 4, "turn_duration": 1.2}
+                                'white_scale': 0.3, 'turn': [0.5, 0], 'cameraPri': 5, 'stop': [0, 0],
+                                "red_scale": 0.7, 'collitionPri': 4, "turn_duration": 1.2, "stop_duration": 1.0}
 
     def add_behavior(self, behavior):
         """legg til ny behavior"""
