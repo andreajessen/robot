@@ -65,6 +65,7 @@ class BBCON:
             sensob.reset()
 
     def add_motob(self):
+        print("INsdie add_motod")
         motor = Motors()
         motor.forward(0.25, 1.0)
         print("Drive forward!!!")
