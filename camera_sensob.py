@@ -11,21 +11,22 @@ class CameraSensob(Sensob):
         self.sensors = [self.camera_obj]
 
     def rgb(self, img):
-        rgb = [0, 0, 0]
+        rgb_list = [0, 0, 0]
 
         for x in range(40, 80):
             for y in range(40, 50):
                 band = img.getpixel((x, y))
-                rgb[0] += band[0]
-                rgb[1] += band[1]
-                rgb[2] += band[2]
+                rgb_list[0] += band[0]
+                rgb_list[1] += band[1]
+                rgb_list[2] += band[2]
 
-        tot = sum(rgb)
-        rgb[0] = rgb[0] / tot
-        rgb[1] = rgb[1] / tot
-        rgb[2] = rgb[2] / tot
+        tot = sum(rgb_list)
 
-        return rgb
+        rgb_list[0] = rgb_list[0] / tot
+        rgb_list[1] = rgb_list[1] / tot
+        rgb_list[2] = rgb_list[2] / tot
+
+        return rgb_list
 
     def update(self):
         """Overwrite the update-method in the superclass Sensob"""
