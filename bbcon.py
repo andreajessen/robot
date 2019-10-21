@@ -19,10 +19,10 @@ class BBCON:
         self.sensobs = []
         self.motobs = []
         self.arbitrator = Arbitrator()
-        self.behavior_values = {'motor_duration': 0.5, 'min_distance': 5.0,
+        self.behavior_values = {'motor_duration': 0.7, 'min_distance': 5.0,
                                 'goPri': 1,'backwards': [-0.5, -0.5], "forward": [0.5, 0.5], 'whitePri': 2,
                                 'white_scale': 0.3, 'turn': [0.5, 0], 'cameraPri': 5, 'stop': [0, 0],
-                                "red_scale": 0.85, 'collitionPri': 4}
+                                "red_scale": 0.85, 'collitionPri': 4, "turn_duration": 1.2}
 
     def add_behavior(self, behavior):
         """legg til ny behavior"""
