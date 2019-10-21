@@ -77,7 +77,7 @@ class AvoidCollision(Behavior):
         self.match_degree = 0
         self.motor_recommendations = None
 
-        if distance >= min_distance:
+        if distance <= min_distance:
             self.motor_recommendations = [self.bbcon.behavior_values["backwards"]]
             self.match_degree = 1
 
