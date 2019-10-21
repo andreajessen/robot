@@ -66,7 +66,6 @@ class BBCON:
 
     def add_motob(self):
         motor = Motors()
-        motor.setup()
         motor.forward()
         motob = Motob(motor, self)
         self.motobs.append(motob)
