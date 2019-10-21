@@ -73,6 +73,8 @@ class BBCON:
         self.motobs.append(motob)
 
     def main(self):
+        zumo = ZumoButton()
+        zumo.wait_for_press()
         print("main!!!!!")
         self.add_motob()
         ultra_sonic = Ultrasonic()
@@ -89,8 +91,6 @@ class BBCON:
         self.behaviors.append(collide)
         self.behaviors.append(white)
         self.behaviors.append(stop)
-        zumo = ZumoButton()
-        zumo.wait_for_press()
         while True:
             self.run_one_timestep()
             print("RUN")
