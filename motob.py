@@ -1,4 +1,4 @@
-"""Motbo klassen"""
+"""Motbo klasse  mjn"""
 
 
 class Motob:
