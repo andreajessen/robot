@@ -7,7 +7,8 @@ class CameraSensob(Sensob):
 
     def __init__(self):
         super().__init__()
-        self.sensors = [Camera()]
+        self.camera_obj = Camera()
+        self.sensors = [self.camera_obj]
 
     def rgb(self, img):
         rgb = [0, 0, 0]
